@@ -57,6 +57,10 @@ header > a {
     font-size: 16px;
 }
 
+#search:hover {
+    cursor: pointer;
+}
+
 #departure {
     border-radius: 5px 5px 0px 0px;
     border: 0px;
@@ -89,6 +93,7 @@ header > a {
     text-align: center;
     align-items: center;
     padding-top: 30px;
+    overflow-y: auto;
     
 }
 
@@ -154,3 +159,19 @@ a {
     text-decoration: none;
     color: black;
 }
+
+#chaque-trajet {
+    background-color: #F5EEEE;
+    margin: 5px;
+}
+
+#chaque-trajet > button {
+    background-color: #469E85;
+    border: none;
+    border-radius: 3px;
+}
+
+#chaque-trajet > button:hover{
+    cursor: pointer;
+}
+

@@ -1,4 +1,7 @@
+
+
 document.getElementById('date').valueAsDate = new Date();
+
 
 document.getElementById('form').addEventListener('submit', async function(e) {
     e.preventDefault();
@@ -26,12 +29,29 @@ function displayResults(trips) {
     partRight.innerHTML = ''; 
 
     if (trips.length === 0) {
-        partRight.innerHTML = '<p>Aucun trajet trouvé.</p>';
+        partRight.innerHTML = `
+         <img src="./images/notfound.png" alt="">
+        <p>Aucun trajet trouvé.</p>`;
     } else {
+        
         trips.forEach(trip => {
-            const tripElement = document.createElement('p');
-            tripElement.textContent = `Départ: ${trip.departure}, Arrivée: ${trip.arrival}, Date: ${trip.date}`;
+           
+           const formattedTime = moment(trip.date).format('HH:mm');
+            const tripElement = document.createElement('div');
+            tripElement.id = "chaque-trajet"
+            tripElement.innerHTML = `
+            ${trip.departure} > ${trip.arrival} ${formattedTime} ${trip.price}€ 
+            <button class="book-button">Book</button>`;
             partRight.appendChild(tripElement);
+            const bookButton = tripElement.querySelector('.book-button');
+            bookButton.addEventListener('click', function() {
+                localStorage.setItem("mon-trip",trip);
+                window.location.href = 'cart.html';
+            });
+            
         });
     }
 }
+
+
+
