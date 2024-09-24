@@ -12,5 +12,38 @@
         <p>Compare, book and enjoy cheap prices for train tickets: your journey start on Tickethack.</p>
     </header>
     
-</body>
-</html>
+    <main>
+        <section id="part-left">
+
+            <form action="" method="post" id="form">
+
+            <label for="departure"></label>
+            <input type="text" id="departure" name="departure" placeholder="Departure">
+
+            <label for="arrival"></label>
+            <input type="text" id="arrival" name="arrival" placeholder="Arrival">
+
+            <label for="date"></label>
+            <input type="date" id="date" name="date" />
+
+            <button type="submit" id="search">Search</button>
+
+            </form>
+
+            <script>
+                // Définit la date du jour dans l'input de type date
+                document.getElementById('date').valueAsDate = new Date();
+            </script>
+
+        </section>
+
+        <section id="part-right">
+            <img id="image-train" src="./images/train.png" alt="train" >
+            <p id="text-image">It's time to book your future trip.</p>
+
+        </section>
+    </main>
+
+
+</body> 
+</html> 

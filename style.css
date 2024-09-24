@@ -24,3 +24,89 @@ header > h1 {
     padding-bottom: 15px;
     font-size: 40px;
 }
+
+#form {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 50vh;
+    background-color: #FEFEFE;
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 70px;
+}
+
+#date {
+    margin-top: 30px;
+    border-radius: 5px;
+    background-color: #EFF2F1;
+    border: none;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#search {
+    margin-top: 200px;
+    color: white;
+    background-color: #459E85;
+    height: 150px;
+    border-radius: 3px;
+    border: none;
+}
+
+#departure {
+    border-radius: 5px 5px 0px 0px;
+    border: 0px;
+    background-color: #EFF2F1;
+    height: 150px;
+    padding-left: 10px;
+
+}
+
+#arrival {
+    border-radius: 0px 0px 5px 5px;
+    background-color: #EFF2F1;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 3px solid #DBDDDD;
+    height: 153px;
+    padding-left: 10px;
+}
+
+#part-right {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 50vh;
+    background-color: #FEFEFE;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 70px;
+    text-align: center;
+    align-items: center;
+    padding-top: 30px;
+    
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#image-train {
+    height: 100px;
+    width: 100px;
+    margin-top: 50px;
+    
+}
+
+#text-image {
+margin-top: 80px;
+border-top: 3px solid #A1D1C2;
+padding-top: 40px;
+
+}
