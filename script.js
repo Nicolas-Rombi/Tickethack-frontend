@@ -5,7 +5,7 @@ document.getElementById('form').addEventListener('submit', async function(e) {
     const departure = document.getElementById('departure').value;
     const arrival = document.getElementById('arrival').value;
     const date = document.getElementById('date').value;
-    const response = await fetch('/search', {
+    const response = await fetch('http://localhost:3000/search', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ document.getElementById('form').addEventListener('submit', async function(e) {
    
 function displayResults(trips) {
     const partRight = document.getElementById('part-right');
-    partRight.innerHTML = ''; // Réinitialise les résultats précédents
+    partRight.innerHTML = ''; 
 
     if (trips.length === 0) {
         partRight.innerHTML = '<p>Aucun trajet trouvé.</p>';
