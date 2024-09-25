@@ -1,19 +1,17 @@
-const cartPage = document.getElementById('cart-page');
+const cartPage = document.getElementById('my-carts');
 
-const tripKeys = Object.keys(localStorage); // Récupère toutes les clés de localStorage
+const tripKeys = Object.keys(localStorage); 
 if (tripKeys.length > 0) {
     tripKeys.forEach(key => {
-        const trip = JSON.parse(localStorage.getItem(key)); // Récupère chaque trajet
+        const trip = JSON.parse(localStorage.getItem(key)); 
         const tripElement = document.createElement('div');
         tripElement.className = 'trip-item';
         tripElement.innerHTML = `
-            <p>Départ : ${trip.departure}</p>
-            <p>Arrivée : ${trip.arrival}</p>
-            <p>Heure : ${moment(trip.date).format('HH:mm')}</p>
-            <p>Prix : ${trip.price}€</p>
-            <hr>`;
+            <p>${trip.departure}> ${trip.arrival}  ${moment(trip.date).format('HH:mm')}   ${trip.price}€</p><button type="submit" id="delete">x</button>`
+           
         cartPage.appendChild(tripElement);
     });
 } else {
     cartPage.innerHTML = `<p>Aucun trajet trouvé dans le panier.</p>`;
 }
+
