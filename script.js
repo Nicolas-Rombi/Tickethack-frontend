@@ -45,10 +45,8 @@ function displayResults(trips) {
             partRight.appendChild(tripElement);
             const bookButton = tripElement.querySelector('.book-button');
             bookButton.addEventListener('click', function() {
-                let trips = JSON.parse(localStorage.getItem('mon-trips')) || [];
-                trips.push(trip);
-                localStorage.setItem('mon-trip', JSON.stringify(trip)); // Storing the trip as JSON string
-                console.log(localStorage.getItem('mon-trip'));
+                localStorage.setItem(`${trip._id}`, JSON.stringify(trip)); 
+                
                 window.location.href = 'cart.html';
             });
             
