@@ -1,3 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+header {
+    width: 100vw;
+    display: flex;
+    height: 5vh;
+    background-color: #FEFEFE;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    color: #5B9686;
+
+
+}
+#logo{
+   
+    color: #469E85;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+header > div > button {
+    border: none;
+    background-color: #FEFEFE ;
+    font-weight: bold;
+}
+
+#title {
+    color: aliceblue;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;
+}
+
+header > a {
+    padding-bottom: 15px;
+    font-size: 30px;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -21,7 +71,7 @@ main {
 
 }
 
-.trip-item, #my-bookings {
+.trip-item {
     display: flex;
     background-color: #EFF2F1;
     justify-content: space-around;
@@ -84,4 +134,19 @@ header {
     color: #5B9686;
 
 
+}
+
+.booking-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    background-color: #EFF2F1;
+}
+
+#my-bookings {
+    display: flex;
+    flex-direction: column;
+ 
+    padding: 10px;
+    border-radius: 5px;
 }
