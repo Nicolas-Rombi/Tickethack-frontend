@@ -1,6 +1,6 @@
-let selectedTrip = localStorage.getItem('mon-trip')
-
+let selectedTrip = localStorage.getItem('mon-trip');
 if (selectedTrip) {
+    selectedTrip = JSON.parse(selectedTrip);
     const cartPage = document.getElementById('cart-page');
     
     const tripElement = document.createElement('div');
