@@ -4,14 +4,84 @@ main {
     align-items: center;
     height: 100vh;
     width: 100vw;
+    background-color: #EFF2F1;
 }
 
-/* Style pour le #cart-page */
 #cart-page {
     display: flex;
     height: 40vh;
     width: 80vw;
     background-color: #459E85;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    background-color: #FEFEFE;
+    border-radius: 10px;
+   
+
+}
+
+.trip-item, #my-bookings {
+    display: flex;
+    background-color: #EFF2F1;
+    justify-content: space-around;
+    width: 1000px;
+    height: 50px;
+    border-radius: 5px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#footer {
+    display: flex;
+    background-color: #00153E;
+    color: white;
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 0px 0px 5px 5px;
+
+
+}
+
+#footer > p {
+    padding-left: 40px;
+}
+
+#footer > button {
+    margin-right: 40px;
+    background-color: #5C9283;
+    border-radius: 5px;
+    display: inline-block;
+    height: 40px;
+    margin-top: 5px;
+    color: white;
+}
+
+.delete {
+    background-color: #5C9283;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
+
+#footer > button:hover {
+    cursor: pointer;
+}
+
+
+.delete:hover {
+    cursor: pointer;
+}
+
+header {
+    width: 100vw;
+    display: flex;
+    height: 5vh;
+    background-color: #FEFEFE;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    color: #5B9686;
+
+
 }

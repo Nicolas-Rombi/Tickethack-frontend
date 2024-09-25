@@ -1,0 +1,1 @@
+const cartPage = document.getElementById('my-bookings');

@@ -9,7 +9,7 @@ if (tripKeys.length > 0) {
         const tripElement = document.createElement('div');
         tripElement.className = 'trip-item';
         tripElement.innerHTML = `
-            <p>${trip.departure}> ${trip.arrival}  ${moment(trip.date).format('HH:mm')}   ${trip.price}€</p><button type="submit" id="${key}" class="delete">x</button>`
+            <div>${trip.departure}> ${trip.arrival}</div> <div> ${moment(trip.date).format('HH:mm')} </div>  <div> ${trip.price}€</div> <button type="submit" id="${key}" class="delete">x</button>`
            
         cartPage.appendChild(tripElement);
         
@@ -29,3 +29,31 @@ const deleteButton = document.querySelectorAll('.delete');
             localStorage.removeItem(tripId);
             location.reload()
         })})
+        const purchaseButton = document.getElementById('purchase');
+
+        document.getElementById('Purchase').addEventListener('click', () => {
+            const tripKeys = Object.keys(localStorage);
+            const trips = tripKeys.map(key => {
+                const trip = JSON.parse(localStorage.getItem(key));
+        
+                // Supprimer le champ _id pour éviter les duplications
+                const { _id, ...tripWithoutId } = trip; 
+                return tripWithoutId;
+            });
+        
+            fetch('http://localhost:3000/purchase', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ trips }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result) {
+                    localStorage.clear(); 
+                    window.location.href = 'bookings.html';
+                } 
+            })
+        
+        });
