@@ -1,5 +1,5 @@
 let selectedTrips = JSON.parse(localStorage.getItem('selectedTrips'))
-console.log(selectedTrips);
+
 
 const cartPage = document.getElementById('cart-page');
 selectedTrips.forEach(trip => {
